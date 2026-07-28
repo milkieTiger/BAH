@@ -14,15 +14,15 @@ export const metadata: Metadata = {
     "Borneo Anthro Hub 2027 — the anthro & furry fandom gathering in the heart of Borneo. Join the community for panels, art, dances, and more.",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const themeKey = await getActiveThemeKey();
-  const theme = await getActiveTheme();
+  const themeKey = getActiveThemeKey();
+  const theme = getActiveTheme();
   const cssVars = themeToCssVars(theme);
-  const siteState = await getSiteState();
+  const siteState = getSiteState();
 
   return (
     <html

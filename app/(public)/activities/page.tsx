@@ -2,8 +2,8 @@ import PageHero from "@/components/server/layout/PageHero";
 import Section from "@/components/server/layout/Section";
 import { requireFeature } from "@/lib/site-state/require-feature";
 
-export default async function ActivitiesPage() {
-  await requireFeature("activities");
+export default function ActivitiesPage() {
+  requireFeature("activities");
 
   return (
     <div className="flex flex-1 flex-col">

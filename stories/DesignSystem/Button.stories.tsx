@@ -5,7 +5,7 @@ import { Button } from "@base-ui/react/button";
  * Documents the two button styles used across the site (see
  * `components/client/home/HeroActions.tsx`), including the `disabled` state.
  * Switch the "Theme" toolbar to preview these styles across every theme
- * (bah / cyberpunk / greyscale) - the Tailwind classes never hardcode colors,
+ * (2026 / 2027 / greyscale) - the Tailwind classes never hardcode colors,
  * they resolve from the active theme's CSS custom properties.
  */
 const meta = {

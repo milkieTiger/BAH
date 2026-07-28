@@ -2,8 +2,8 @@ import PageHero from "@/components/server/layout/PageHero";
 import Section from "@/components/server/layout/Section";
 import { requireFeature } from "@/lib/site-state/require-feature";
 
-export default async function PanelSubmissionPage() {
-  await requireFeature("panelSubmission");
+export default function PanelSubmissionPage() {
+  requireFeature("panelSubmission");
 
   return (
     <div className="flex flex-1 flex-col">
@@ -28,10 +28,17 @@ export default async function PanelSubmissionPage() {
           speakers and first-time panelists are welcome. Let&rsquo;s be the
           change we want by sharing the knowledge we need.
         </p>
-        <p className="text-muted-foreground mt-4 text-xs italic">
-          Upon submission, you are deemed to have read and agreed to be bound to
-          our Panelist&rsquo;s Terms &amp; Conditions.
-        </p>
+        <div className="mt-6">
+          <a
+            href="https://forms.gle/panel-submission"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition-colors"
+          >
+            Open Panel Submission Form
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </Section>
     </div>
   );

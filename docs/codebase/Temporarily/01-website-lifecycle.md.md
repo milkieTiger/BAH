@@ -4,7 +4,9 @@
 
 The BAH website changes throughout the year according to the convention timeline.
 
-Rather than deploying multiple versions of the website, the application operates under a single **Website State**. The frontend and backend use this state to determine which pages, features, and actions are available.
+Rather than deploying multiple versions of the website, the application operates under a single **Website State**. The frontend uses this state to determine which pages, features, and actions are available.
+
+> **2027 Note:** The 2027 website is static-only (no API, no backend). Authentication, account creation, ticket registration, profile editing, and badge pickup are **not available** in 2027 — these features are reserved for the 2028 full-stack release. For 2027, submission pages (Art, Dealer, Panel) link to external Google Forms.
 
 ---
 
@@ -14,9 +16,9 @@ Rather than deploying multiple versions of the website, the application operates
 | ---- | ------------------------- | ----------------------------------------------------------------------------------- |
 | D    | Dormant                   | Default off-season website. Only evergreen content is available.                    |
 | T    | Teaser                    | Convention theme is announced. Limited convention information becomes available.    |
-| A    | Announcement              | Convention website officially launches. Account creation opens.                     |
-| TR   | Ticket Registration       | Ticket registration opens. Attendee profile editing is available.                   |
-| RC   | Registration Closed       | Ticket registration closes. Dealer and panel submissions remain available.          |
+| A    | Announcement              | Convention website officially launches. Full theme content available.               |
+| TR   | Ticket Registration       | Transitional state. Same content as Announcement for 2027. (2028: ticket sales.)    |
+| RC   | Registration Closed       | Submissions period. Dealer and panel submission info pages are available.           |
 | FIR  | Final Information Release | Final attendee information is published including schedule and Dealer's Den layout. |
 
 ---
@@ -50,13 +52,11 @@ Off-season website.
 ### Available
 
 - Evergreen pages
-- Volunteer application
+- Volunteer application (Google Form link)
 
 ### Unavailable
 
 - Theme pages
-- Ticket registration
-- Account creation
 - Convention information
 
 ---
@@ -72,7 +72,7 @@ Reveal the yearly convention.
 - Theme landing page
 - Convention information
 - Travel guide
-- Art submission
+- Art submission (Google Form link)
 
 ---
 
@@ -85,8 +85,7 @@ Convention website officially launches.
 ### Available
 
 - Full yearly theme website
-- Account creation
-- Profile customization
+- Activities
 
 ---
 
@@ -94,11 +93,15 @@ Convention website officially launches.
 
 ### Purpose
 
-Attendee registration period.
+Ticket registration period. In 2027 (static), this displays ticket tier information with a link to an external Google Form for registration.
 
 ### Available
 
-- Ticket purchase
+- Ticket registration info (Google Form link)
+
+### 2028 (Future)
+
+- Embedded ticket purchase
 - Profile editing
 - Registration management
 
@@ -108,17 +111,12 @@ Attendee registration period.
 
 ### Purpose
 
-Registration is closed while organizer submissions continue.
+Organizer submission period.
 
 ### Available
 
-- Dealer submission
-- Panel submission
-
-### Disabled
-
-- Ticket purchase
-- New attendee registration
+- Dealer submission info (Google Form link)
+- Panel submission info (Google Form link)
 
 ---
 
@@ -133,9 +131,7 @@ Prepare attendees for the convention.
 - Event schedule
 - Dealer's Den layout
 - Booth listings
+
+### 2028 (Future)
+
 - Badge pickup selection
-
-### Disabled
-
-- Profile editing
-- Registration modification

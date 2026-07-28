@@ -4,6 +4,9 @@
 // Maps to the lifecycle states defined in docs/codebase/Temporarily/
 //   01-website-lifecycle.md
 //   03-feature-matrix.md
+//
+// 2027 SCOPE: Features marked with † (2028) are reserved for the 2028
+// full-stack release. They are set to [] in feature-matrix.ts.
 // =============================================================================
 
 /**
@@ -33,6 +36,8 @@ export const SITE_STATE_LABELS: Record<SiteState, string> = {
 /**
  * Every feature / page group that can be toggled per state.
  * One entry per row in the feature-availability matrix.
+ *
+ * Features marked with † are reserved for 2028 (static-only in 2027).
  */
 export type Feature =
   | "aboutUs"
@@ -48,11 +53,11 @@ export type Feature =
   | "foodGuide"
   | "destinations"
   | "artSubmission"
-  | "accountCreation"
-  | "login"
+  | "accountCreation" // † 2028
+  | "login" // † 2028
   | "ticketRegistration"
-  | "profileEditing"
-  | "badgePickupSelection"
+  | "profileEditing" // † 2028
+  | "badgePickupSelection" // † 2028
   | "dealerSubmission"
   | "panelSubmission"
   | "dealerLayout"

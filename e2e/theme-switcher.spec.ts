@@ -27,9 +27,9 @@ test.describe("Dev theme switcher", () => {
     const { themeSwitcher } = homePage;
     const backgroundBefore = await themeSwitcher.cssVariable("--background");
 
-    await themeSwitcher.selectTheme("cyberpunk");
+    await themeSwitcher.selectTheme("2027");
 
-    await expect(themeSwitcher.html).toHaveAttribute("data-theme", "cyberpunk");
+    await expect(themeSwitcher.html).toHaveAttribute("data-theme", "2027");
 
     const backgroundAfter = await themeSwitcher.cssVariable("--background");
     expect(backgroundAfter).not.toBe(backgroundBefore);
@@ -39,8 +39,6 @@ test.describe("Dev theme switcher", () => {
   test("lists every configured theme as an option", async ({ homePage }) => {
     const optionValues = await homePage.themeSwitcher.optionValues();
 
-    expect(optionValues.sort()).toEqual(
-      ["bah", "cyberpunk", "greyscale"].sort(),
-    );
+    expect(optionValues.sort()).toEqual(["2026", "2027", "greyscale"].sort());
   });
 });

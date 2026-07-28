@@ -49,15 +49,6 @@ export function ThemeProvider({
    * validates `NODE_ENV === "development"` and rejects otherwise.
    */
   const setThemeKey = (key: ThemeKey) => {
-    fetch("/api/dev/theme", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ theme: key }),
-    }).catch(() => {
-      // Silently ignore — the cookie setter may not exist in prod, and the
-      // button that calls this is stripped from prod builds anyway.
-    });
-
     setThemeKeyInternal(key);
   };
 
@@ -67,7 +58,7 @@ export function ThemeProvider({
     for (const [name, value] of Object.entries(cssVars)) {
       root.style.setProperty(name, value);
     }
-    root.dataset.theme = themeKey;
+    root.dataset.theme = String(themeKey);
 
     let fontLink = document.getElementById(
       FONT_LINK_ID,

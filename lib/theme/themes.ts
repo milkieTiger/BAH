@@ -72,8 +72,8 @@ export interface Theme {
 // -----------------------------------------------------------------------------
 
 export const themes = {
-  bah: {
-    label: "Borneo Anthro Hub",
+  2026: {
+    label: "2026",
     font: "'General Sans', system-ui, sans-serif",
     brand: {
       bg: "#175b68",
@@ -114,8 +114,8 @@ export const themes = {
     },
   },
 
-  cyberpunk: {
-    label: "Cyberpunk",
+  2027: {
+    label: "2027",
     font: "'Orbitron', system-ui, sans-serif",
     fontUrl:
       "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap",

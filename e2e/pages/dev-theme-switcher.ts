@@ -61,7 +61,7 @@ export class DevThemeSwitcher {
     // Close the dropdown by pressing Escape
     await this.button.page().keyboard.press("Escape");
 
-    return texts.map((t) => this.labelToKey[t.trim()]);
+    return texts.map((t) => String(this.labelToKey[t.trim()]));
   }
 
   /** Reads a resolved `--css-var` value off the theme provider's `<html>` element. */

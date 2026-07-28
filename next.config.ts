@@ -1,14 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Required for the Docker multi-stage build: emits a minimal
-  // standalone server (.next/standalone) instead of relying on
-  // node_modules being present in the runtime image.
-  output: "standalone",
+  // Static export for CDN / GitHub Pages deployment.
+  output: "export",
 
-  // Enable React Compiler for automatic memoization.
-  // https://nextjs.org/docs/app/api-reference/config/next-config-js/reactCompiler
-  reactCompiler: true,
+  // Set to repo name for GitHub Pages project sites (e.g. "/bah-nextjs").
+  // Leave empty for custom domains.
+  basePath: process.env.NEXT_BASE_PATH ?? "",
+
+  // Required for static export — no image optimization server.
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

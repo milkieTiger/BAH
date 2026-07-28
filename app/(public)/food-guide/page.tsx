@@ -2,8 +2,8 @@ import PageHero from "@/components/server/layout/PageHero";
 import ComingSoon from "@/components/server/layout/ComingSoon";
 import { requireFeature } from "@/lib/site-state/require-feature";
 
-export default async function FoodGuidePage() {
-  await requireFeature("foodGuide");
+export default function FoodGuidePage() {
+  requireFeature("foodGuide");
 
   return (
     <div className="flex flex-1 flex-col">

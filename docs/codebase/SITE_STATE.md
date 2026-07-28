@@ -51,17 +51,18 @@ docker-compose.yml                app/layout.tsx (async Server Component)
 
 The complete availability table is in `lib/site-state/feature-matrix.ts`. Each feature maps to the set of states in which it is enabled:
 
+> **2027 Note:** Features marked with `† (2028)` are reserved for the 2028 full-stack release and are never available in 2027 (set to `[]` in the matrix).
+
 | Feature                                                                                                      | States                            |
 | ------------------------------------------------------------------------------------------------------------ | --------------------------------- |
-| `aboutUs`, `codeOfConduct`, `termsAndConditions`, `volunteerApplication`, `login`                            | D T A TR RC FIR (evergreen)       |
+| `aboutUs`, `codeOfConduct`, `termsAndConditions`, `volunteerApplication`                                     | D T A TR RC FIR (evergreen)       |
 | `themeLandingPage`, `venue`, `guestOfHonor`, `travelInformation`, `bahjetGuide`, `foodGuide`, `destinations` | T A TR RC FIR (teaser onward)     |
 | `activities`                                                                                                 | A TR RC FIR (announcement onward) |
-| `accountCreation`                                                                                            | A only                            |
-| `profileEditing`                                                                                             | A TR                              |
 | `artSubmission`                                                                                              | T A                               |
-| `ticketRegistration`                                                                                         | TR only                           |
 | `dealerSubmission`, `panelSubmission`                                                                        | RC only                           |
-| `badgePickupSelection`, `dealerLayout`, `boothListing`, `eventSchedule`                                      | FIR only                          |
+| `dealerLayout`, `boothListing`, `eventSchedule`                                                              | FIR only                          |
+| `ticketRegistration`                                                                                         | TR only                           |
+| `login`, `accountCreation`, `profileEditing`, `badgePickupSelection` † (2028)                                | [] (never)                        |
 
 ### 5) Usage Patterns
 
@@ -84,10 +85,12 @@ export default async function SchedulePage() {
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about", feature: "aboutUs" as const },
+  { label: "Venue", href: "/venue", feature: "venue" as const },
   { label: "Schedule", href: "/schedule", feature: "eventSchedule" as const },
-  { label: "Login", href: "/login", feature: "login" as const }, // feature-gated
 ];
 ```
+
+> **2027 Note:** `login`, `register`, `profile`, `tickets`, and `badge-pickup` nav items are omitted for 2027 (features reserved for 2028).
 
 Items without a `feature` (like `Home`) are always visible.
 Items with a `feature` field are filtered out by `useSiteState().isEnabled()` before rendering (both desktop `NavigationMenu` and mobile drawer).

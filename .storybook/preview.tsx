@@ -35,7 +35,7 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
-    theme: "bah" satisfies ThemeKey,
+    theme: "2026" satisfies ThemeKey,
   },
   decorators: [
     (Story, context) => {

@@ -10,8 +10,8 @@ import { useState, useRef, useEffect } from "react";
  * to pick another theme. Development only — stripped from production builds.
  */
 const themeSwatches: Record<ThemeKey, string> = {
-  bah: themes.bah.brand.accent,
-  cyberpunk: themes.cyberpunk.brand.accent,
+  "2026": themes["2026"].brand.accent,
+  "2027": themes["2027"].brand.accent,
   greyscale: themes.greyscale.brand.accent,
 };
 

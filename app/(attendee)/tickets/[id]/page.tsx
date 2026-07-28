@@ -1,3 +1,4 @@
+import { use } from "react";
 import PageHero from "@/components/server/layout/PageHero";
 import ComingSoon from "@/components/server/layout/ComingSoon";
 import { requireFeature } from "@/lib/site-state/require-feature";
@@ -6,9 +7,13 @@ interface Props {
   params: Promise<{ id: string }>;
 }
 
-export default async function TicketDetailPage({ params }: Props) {
-  await requireFeature("ticketRegistration");
-  const { id } = await params;
+export function generateStaticParams() {
+  return [{ id: "placeholder" }];
+}
+
+export default function TicketDetailPage({ params }: Props) {
+  requireFeature("ticketRegistration");
+  const { id } = use(params);
 
   return (
     <div className="flex flex-1 flex-col">

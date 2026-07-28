@@ -55,8 +55,8 @@ const guidelines = [
   },
 ];
 
-export default async function CodeOfConductPage() {
-  await requireFeature("codeOfConduct");
+export default function CodeOfConductPage() {
+  requireFeature("codeOfConduct");
 
   return (
     <div className="flex flex-1 flex-col">

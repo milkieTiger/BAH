@@ -55,18 +55,6 @@ export function SiteStateProvider({
   };
 
   const setState = (next: SiteState) => {
-    // Persist the dev override cookie server-side.
-    // The API route (`app/api/dev/site-state/route.ts`) validates
-    // NODE_ENV === "development" and rejects otherwise.
-    fetch("/api/dev/site-state", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ state: next }),
-    }).catch(() => {
-      // Silently ignore — the cookie setter may not exist in prod, and the
-      // button that calls this is stripped from prod builds anyway.
-    });
-
     setStateInternal(next);
   };
 

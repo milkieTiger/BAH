@@ -2,8 +2,8 @@ import PageHero from "@/components/server/layout/PageHero";
 import ComingSoon from "@/components/server/layout/ComingSoon";
 import { requireFeature } from "@/lib/site-state/require-feature";
 
-export default async function DealerLayoutPage() {
-  await requireFeature("dealerLayout");
+export default function DealerLayoutPage() {
+  requireFeature("dealerLayout");
 
   return (
     <div className="flex flex-1 flex-col">

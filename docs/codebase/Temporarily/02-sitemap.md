@@ -1,5 +1,7 @@
 # Website Sitemap
 
+> **2027 Note:** The 2027 website is static-only (no API). Pages gated to **2028** (Account Creation, Login, Ticket Registration, Profile Customization, Badge Pickup) are not included in the 2027 sitemap. For 2027, submission pages link to external Google Forms.
+
 ## Navigation Structure
 
 ```text
@@ -14,7 +16,7 @@ Evergreen
 │   ├── Code of Conduct
 │   └── Terms & Conditions
 │
-└── Volunteer Application
+└── Volunteer Application (Google Form)
 
 Yearly Theme
 ├── Convention Info
@@ -29,16 +31,27 @@ Yearly Theme
 │   ├── Food Guide
 │   └── Destinations
 │
-├── Art Submission
+├── Art Submission (Google Form)
 │
-├── Attendee
-│   ├── Account Creation
-│   ├── Ticket Registration
-│   └── Profile Customization
+├── Ticket Registration (Google Form)
 │
-├── Dealer's Den Submission
+├── Dealer's Den Submission (Google Form)
 │
-└── Panel Submission
+└── Panel Submission (Google Form)
+```
+
+---
+
+# 2028 (Future)
+
+The following pages are planned for the 2028 full-stack release when API integration is added:
+
+```text
+Attendee
+├── Account Creation
+├── Login
+├── Profile Customization
+└── Badge Pickup Selection
 ```
 
 ---
@@ -50,7 +63,7 @@ These pages are available throughout the year.
 - About Us
 - Code of Conduct
 - Terms & Conditions
-- Volunteer Application
+- Volunteer Application (external Google Form)
 
 ---
 
@@ -72,13 +85,7 @@ These pages are enabled depending on the website lifecycle.
 - Food Guide
 - Destinations
 
-## Attendee
-
-- Account Creation
-- Ticket Registration
-- Profile Customization
-
-## Submission
+## Submission (Google Form links in 2027)
 
 - Art Submission
 - Dealer Submission

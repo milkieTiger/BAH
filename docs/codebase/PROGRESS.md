@@ -4,6 +4,22 @@
 
 ---
 
+## Phase 5 — 2027 Static Scope Refinement (July 2026)
+
+### What changed
+
+Per the 2027 static-website scope change, auth/account/ticket features were disabled and all documentation was updated:
+
+| Area                       | Change                                                                                                                                       |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Feature Matrix**         | `login`, `accountCreation`, `ticketRegistration`, `profileEditing`, `badgePickupSelection` set to `[]` (never available) — reserved for 2028 |
+| **Submission Pages**       | Art, Dealer, and Panel submission pages now display Google Form links instead of ComingSoon placeholders                                     |
+| **(auth) Route Group**     | `login/page.tsx` and `register/page.tsx` remain as shells — they 404 in all states since features are `[]`                                   |
+| **(attendee) Route Group** | `profile`, `tickets`, `badge-pickup` pages 404 in all states. `dealer-submission` and `panel-submission` now show Google Form links          |
+| **Documentation**          | All 5 Temporarily docs + 3 codebase docs updated to reflect static-only 2027 scope                                                           |
+
+---
+
 ## Phase 1 — Route Restructuring
 
 ### Problem

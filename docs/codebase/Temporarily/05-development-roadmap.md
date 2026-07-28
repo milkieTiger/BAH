@@ -1,5 +1,7 @@
 # Development Roadmap
 
+> **2027 Note:** The 2027 website is static-only. Phases 3 (Authentication) and 4 (Ticket Registration) are deferred to the 2028 full-stack release. In 2027, submission pages (Art, Dealer, Panel) link to external Google Forms.
+
 ## Phase 1 (MVP)
 
 ### Foundation
@@ -18,13 +20,13 @@
 - Theme landing page
 - Convention information
 - Travel guide
-- Art submission
+- Art submission info page (Google Form link)
 
 ---
 
-## Phase 3
+## Phase 3 → DEFERRED TO 2028
 
-### Authentication
+### Authentication (2028)
 
 - Login
 - Registration
@@ -37,7 +39,12 @@
 
 ### Ticket Registration
 
-- Ticket purchase
+- Ticket tier information page
+- External Google Form link for registration
+
+### 2028 (Future)
+
+- Embedded ticket purchase
 - Registration management
 - Profile editing
 
@@ -45,11 +52,10 @@
 
 ## Phase 5
 
-### Organizer Features
+### Organizer Info Pages
 
-- Dealer submission
-- Panel submission
-- Admin review
+- Dealer submission info page (Google Form link)
+- Panel submission info page (Google Form link)
 
 ---
 
@@ -60,7 +66,6 @@
 - Event schedule
 - Dealer's Den layout
 - Booth listing
-- Badge pickup
 
 ---
 
@@ -76,16 +81,7 @@ Navigation
 Content Pages
         │
         ▼
-Authentication
-        │
-        ▼
-User Account
-        │
-        ▼
-Ticket Registration
-        │
-        ▼
-Organizer Features
+Organizer Info Pages
         │
         ▼
 Final Information Release
@@ -95,11 +91,9 @@ Final Information Release
 
 # Milestones
 
-| Milestone | Deliverables        |
-| --------- | ------------------- |
-| M1        | MVP Website         |
-| M2        | Theme Website       |
-| M3        | User Accounts       |
-| M4        | Ticket Registration |
-| M5        | Organizer Portal    |
-| M6        | Convention Ready    |
+| Milestone | Deliverables         |
+| --------- | -------------------- |
+| M1        | MVP Website          |
+| M2        | Theme Website        |
+| M3        | Organizer Info Pages |
+| M4        | Convention Ready     |

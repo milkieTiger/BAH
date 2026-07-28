@@ -2,8 +2,8 @@ import PageHero from "@/components/server/layout/PageHero";
 import ComingSoon from "@/components/server/layout/ComingSoon";
 import { requireFeature } from "@/lib/site-state/require-feature";
 
-export default async function RegisterPage() {
-  await requireFeature("accountCreation");
+export default function RegisterPage() {
+  requireFeature("accountCreation");
 
   return (
     <div className="flex flex-1 flex-col">

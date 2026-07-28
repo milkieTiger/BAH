@@ -1,5 +1,7 @@
 # User Stories
 
+> **2027 Note:** The 2027 website is static-only. Epics 3 (Accounts) and 4 (Ticket Registration) are deferred to 2028. Epic 5 (Submissions) uses external Google Form links instead of embedded forms.
+
 ## Epic 1 - Evergreen Website (P0)
 
 ### US-001 About Us
@@ -22,7 +24,7 @@ As a visitor, I want to read the Terms & Conditions before participating.
 
 ### US-004 Volunteer Application
 
-As a visitor, I want to apply as a volunteer.
+As a visitor, I want to access the volunteer application (external Google Form).
 
 ---
 
@@ -46,11 +48,13 @@ As a visitor, I want travel recommendations.
 
 ### US-009 Submit Art
 
-As an artist, I want to submit artwork for the convention.
+As an artist, I want to access the art submission form (external Google Form link).
 
 ---
 
-## Epic 3 - Accounts (P1)
+## Epic 3 - Accounts (P1) — DEFERRED TO 2028
+
+> This epic is out of scope for the 2027 static website. It will be implemented in the 2028 full-stack release.
 
 ### US-010 Create Account
 
@@ -68,15 +72,17 @@ As an attendee, I want to customize my attendee profile.
 
 ## Epic 4 - Ticket Registration (P1)
 
-### US-013 Purchase Ticket
+> For 2027, the ticket page displays tier information and links to an external Google Form. Embedded registration will be implemented in 2028.
+
+### US-013 View Ticket Information
+
+As an attendee, I want to view ticket tiers and access the registration form (external Google Form link).
+
+### US-014 Purchase Ticket (2028)
 
 As an attendee, I want to purchase a convention ticket.
 
-### US-014 View Registration
-
-As an attendee, I want to review my registration.
-
-### US-015 Modify Registration
+### US-015 Modify Registration (2028)
 
 As an attendee, I want to edit my registration while registration is open.
 
@@ -84,13 +90,15 @@ As an attendee, I want to edit my registration while registration is open.
 
 ## Epic 5 - Organizer Submissions (P2)
 
+> For 2027, these pages display information and link to external Google Forms. Embedded forms will be implemented in 2028.
+
 ### US-016 Dealer Submission
 
-As a dealer, I want to apply for a Dealer's Den booth.
+As a dealer, I want to find the link to apply for a Dealer's Den booth via Google Form.
 
 ### US-017 Panel Submission
 
-As a panelist, I want to submit a panel proposal.
+As a panelist, I want to find the link to submit a panel proposal via Google Form.
 
 ---
 
@@ -108,6 +116,6 @@ As an attendee, I want to browse the Dealer's Den layout.
 
 As an attendee, I want to browse participating dealers.
 
-### US-021 Badge Pickup
+### US-021 Badge Pickup — DEFERRED TO 2028
 
-As an attendee, I want to choose my badge pickup option.
+> Out of scope for 2027. As an attendee, I want to choose my badge pickup option.

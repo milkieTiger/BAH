@@ -66,18 +66,37 @@ const faqs = [
   },
 ];
 
-export default async function TicketsPage() {
-  await requireFeature("ticketRegistration");
+export default function TicketsPage() {
+  requireFeature("ticketRegistration");
 
   return (
     <div className="flex flex-1 flex-col">
       <PageHero
         eyebrow="Registration"
-        title="My Tickets"
-        description="View and manage your convention tickets."
+        title="Ticket Registration"
+        description="Select your ticket tier and register for Borneo Anthro Hub."
       />
 
-      <Section index="01" eyebrow="Ticket Tiers">
+      <Section index="01" eyebrow="How to Register">
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          Select one of the tiers below and click the button to complete your
+          registration through our external form on Google Forms. All passes
+          grant a 2-day entry to the event.
+        </p>
+        <div className="mt-6">
+          <a
+            href="https://forms.gle/ticket-registration"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition-colors"
+          >
+            Register Now
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </Section>
+
+      <Section index="02" eyebrow="Ticket Tiers">
         <div className="grid gap-4 sm:grid-cols-3">
           {tiers.map((tier) => (
             <div
@@ -99,7 +118,7 @@ export default async function TicketsPage() {
         </div>
       </Section>
 
-      <Section index="02" eyebrow="Frequently Asked Questions" noBorder>
+      <Section index="03" eyebrow="Frequently Asked Questions" noBorder>
         <Accordion.Root className="mx-auto max-w-2xl">
           {faqs.map((faq, i) => (
             <Accordion.Item key={i} className="border-border border-b py-2">
