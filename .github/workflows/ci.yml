@@ -2,7 +2,7 @@ name: Frontend CI
 
 on:
   pull_request:
-    branches: [main, develop]
+    branches: [master, dev]
 
 # Cancel in-progress runs for the same branch (new pushes supersede old ones)
 concurrency:
